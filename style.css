@@ -1,0 +1,244 @@
+.fixed {
+    width: 100%;
+    height: 60vw;
+    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+    
+    margin-top:0vw;
+    float: left;
+    position: fixed;
+    z-index: 0;
+  }
+  #title{
+      font-weight:bold;
+  }
+  a{
+      color:white;
+      text-decoration: none;
+      font-size:2vw;
+      
+      font-family: 'Glacial Indifference';
+  }
+.tae{
+    top:0;
+    position:absolute;
+    z-index:4;
+}
+#navbar{
+    font-size:1vw;
+    display: flex;
+    justify-content: space-around;
+    
+    width:100%;
+    height:3vw;
+    top:0;
+    position: fixed;
+    z-index:999;
+    background-color:rgb(199, 60, 106);
+    color:rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px rgb(17, 17, 17);
+}
+#section{
+    position: relative;
+    font-size:6em;
+    text-align:center;
+    font-family:'Calibri';
+    margin:0;
+}
+.kasu{
+    top:3%;
+    position:absolute;
+    -webkit-clip-path: inset(0% 6% 0% 0%);
+    
+    width:13%;
+    left:7.8%;
+   
+}
+.yuk{
+    top:4.5%;
+    width:20%;
+    left:20.8%;
+    position: absolute;
+    -webkit-clip-path: inset(0% 4% 0% 0%);
+    
+}
+.aya{
+    top:6%;
+    left:69%;
+    position:absolute;
+    width:20%;
+}
+.ran{
+    top:5.5%;
+    position:absolute;
+    left:40%;
+    width:20%;
+    -webkit-clip-path: inset(0% 0% 0% 0%);
+}
+.kokoro{
+    top:5.5%;
+    position:absolute;
+    left:88%;
+    width:20%;
+    -webkit-clip-path: inset(0% 0% 0% 8%);
+}
+.vocal{
+    font-size:10vw;
+    font-family: 'Glacial Indifference';
+}
+#trapezium{
+    position: absolute;
+    height: 0;
+    width: 120px;
+    border-bottom: 58vw solid rgb(236, 68, 124);
+    top:3%;
+    border-right: 30vw solid transparent;
+    padding-right: 20vw;
+    z-index: 1;
+    color:rgba(29, 29, 29, 0.603);
+    font-family: 'Calibri';
+    line-height:1;
+    font-size:15vw;
+}
+#kanji{
+    font-size:14.2vw;
+}
+#overlay-bottom{
+    position:absolute;
+    top:0;
+    left:0%;
+    padding:60px;
+   
+    color:rgb(250, 169, 196);
+}
+#overlay{
+    position:absolute;
+    left:5%;
+   line-height: 3.3;
+    z-index:4;
+    color:white;
+    
+    
+
+}
+
+img{
+    display:block;
+   margin:0;
+   width:100%;
+}
+.yukina{
+   display:block;
+   margin-top:auto;
+   margin-left:auto;
+   margin-right:auto;
+   width:100%;
+   
+   -webkit-filter: grayscale(80%);
+   -moz-filter: grayscale(80%);
+     -o-filter: grayscale(80%);
+    -ms-filter: grayscale(80%);
+        filter: grayscale(80%); 
+        
+       
+}
+
+.rev-block{
+    color:rgb(199, 60, 106);
+    font-weight: bold;
+    font-family: 'Glacial Indifference';
+    font-size:15vw;
+    position:absolute;
+    left:30%;
+    top:30%;
+    margin-bottom:10px;  
+}
+.rev-block span{
+    opacity:0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 1.4s;
+    padding:0;
+}
+.rev-block:after{
+    content:'';
+    top:0;
+    left:0;
+    position:absolute;
+    width:0%;
+    height:100%;
+    background:#00f0b5;
+    animation: rev-block 1.5s cubic-bezier(0.19,1,0.22,1)forwards;
+    animation-delay: 1s;
+}
+@keyframes rev-block{
+    0%{
+        left:0;
+        width:0%;     
+    }
+    50%{
+        left:0;
+        width:100%;
+    }
+    100%{
+        left:100%;
+        width:0;
+    }
+}
+@keyframes appear-text{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.site{
+    color:black;
+   
+    font-family: 'Glacial Indifference';
+    font-size:4vw;
+    position: absolute;
+    left:30%;
+    top:55%;
+    padding:0;
+    margin:10px;
+}
+.site span{
+    background-color: white;
+    opacity:0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 2s;
+    padding:0;
+}
+.site:after{
+    content:'';
+    top:0;
+    left:0;
+    position:absolute;
+    width:0%;
+    height:100%;
+    background:rgb(199, 60, 106);
+    animation: rev-block 1.4s cubic-bezier(0.19,1,0.22,1)forwards;
+    animation-delay: 1.4s;
+}
+@keyframes site{
+    0%{
+        left:0;
+        width:0%;     
+    }
+    50%{
+        left:0;
+        width:100%;
+    }
+    100%{
+        left:100%;
+        width:0;
+    }
+}
+@keyframes appear-text{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}

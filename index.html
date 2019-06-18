@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="jquery-ui.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="jquery-3.3.1.min.js"></script>
+<script src="jquery.fullpage.min.js"></script>
+<script src="textyle.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<link rel="stylesheet" href="jquery.fullPage.css">
+</head>
+<body>
+<div id="navbar">
+        <a id="title">ガルパ
+                         
+        </a>
+        <a href="#home"> Home </a>
+                        <a href="#vocal"> The Vocalists </a>
+                        <a href="#the girls/kasumi"> Kasumi </a>
+                        <a href="#the girls/yukina"> Yukina </a>
+                        <a href="#the girls/ran"> Ran </a>
+                        <a href="#the girls/aya"> Aya </a>  
+                        <a href="#the girls/kokoro"> Kokoro </a>  
+</div>
+<div class="fixed"></div>
+<div id="wrapper">
+	<div class="section" data-anchor="home">
+        <img class="yukina"src="/images/yukina.png" />
+        <div class="rev-block">
+            <span>ガルパ.</span></div> 
+        <div class="site">
+            <span>A Bandori site.</span></div>
+        </div>
+        
+	<div class="section" data-anchor="vocal">
+                <div class="vocal">The Vocalists</div>
+        </div>
+        <div class="section"data-anchor="the girls">
+        
+                        <div id="trapezium"><div id="overlay">KASUMI</div> <div id="overlay-bottom">TOYAMA</div>
+                        <div id="kanji">戸山香澄</div> 
+                         </div>
+       
+                        
+                 <div class="slide"data-anchor="kasumi">
+                <img class="kasu"src="/images/kasu.png" />
+        </div>
+       
+        <div class="slide" data-anchor="yukina">
+                <img class="yuk"src="/images/yuk.png" />
+        </div>
+        <div class="slide" data-anchor="ran">
+                <img class="ran"src="/images/ran.png" />
+        </div>
+        <div class="slide" data-anchor="aya">
+                        <img class="aya"src="/images/aya.png" />
+                </div>
+        <div class="slide" data-anchor="kokoro">
+                        <img class="kokoro"src="/images/kokoro.png" />
+                </div>
+        
+    </div>
+    <div class="section">
+		<img class="tae"src="/images/tae.jpg" />
+	</div>
+	<div class="section">
+		<img src="/images/pop.png" />
+	</div>
+</div>
+<script>
+$(document).ready(function(){
+	$('#wrapper').fullpage({
+                anchors:['home','vocal','the girls','kasumi','yukina','ran','aya','kokoro'],
+                afterSlideLoad: function(anchorLink,index,slideAnchor,slideIndex){
+                $('#slide').fullpage.setScrollingSpeed(400);
+                var loadedSlide = $(this);
+                var $name=$('#overlay');
+                var $name2=$('#overlay-bottom');
+                var $kanji=$('#kanji');
+                if(anchorLink=='the girls'&&slideIndex==1){
+                       
+                        $('#trapezium').animate({
+                                borderBottomColor: "rgb(13, 72, 110)"
+                        },300);
+                        $kanji.css('font-size','14.2vw');
+                        $name2.css('font-size','16vw');
+                        $name.append(" ");
+                        $name2.text('MINATO');
+                        $name2.css('color','rgb(2, 93, 105)');
+                        $name.text(' YUKINA');
+                        $name.effect("slide",200);
+                        $name2.effect("slide",100);
+                        $kanji.text('湊友希那');
+                        $kanji.effect("slide",200);
+                }
+                if(anchorLink=='the girls'&&slideIndex==0){
+                        $('#trapezium').animate({
+                                borderBottomColor: "rgb(236, 68, 124)"
+                        },300);
+                       
+                        $kanji.css('font-size','14.2vw');
+                        $name.append(" ");
+                        $name2.css('font-size','15vw');
+                        $name2.css('color',' rgb(250, 169, 196)');
+                        $name2.text('TOYAMA');
+                        $name.text('KASUMI');
+                        $name.effect("slide",200);
+                        $name2.effect("slide",100);
+                        $kanji.text('戸山香澄');
+                        $kanji.effect("slide",200);
+                }
+                if(anchorLink=='the girls'&&slideIndex==2){
+                        $('#trapezium').animate({
+                                borderBottomColor: "#b71540"
+                        },300);
+                       
+                        $kanji.css('font-size','14.2vw');
+                        $name.append(" ");
+                        $name2.css('font-size','15vw');
+                        $name2.css('color','#c44569');
+                        $name2.text('MITAKE');
+                        $name.text('RAN');
+                        $name.effect("slide",200);
+                        $name2.effect("slide",100);
+                        $kanji.text('美竹蘭');
+                        $kanji.effect("slide",200);
+                }
+                if(anchorLink=='the girls'&&slideIndex==3){
+                        $('#trapezium').animate({
+                                borderBottomColor: "#33d9b2"
+                        },300);
+                       
+                       
+                       
+                        $kanji.css('font-size','14.2vw');
+                        $name2.css('color','#218c74');
+                        $name2.css('font-size','10vw');
+                        $name2.text('MARUYAMA');
+                        $name.text('AYA');
+                        $name.effect("slide",200);
+                        $name2.effect("slide",100);
+                        $kanji.text('丸山彩');
+                        $kanji.effect("slide",200);
+                }
+                if(anchorLink=='the girls'&&slideIndex==4){
+                        $('#trapezium').animate({
+                                borderBottomColor: "#ffda79"
+                        },300);
+                       
+                       
+                       
+                        $name2.css('font-size','11vw');
+                        $name2.css('color','#ffb142');
+                        $name2.text('TSURUMAKI');
+                        $name.text('KOKORO');
+                        $name.effect("slide",200);
+                        $name2.effect("slide",100);
+                        $kanji.css('font-size','12vw');
+                        $kanji.text('弦巻こころ');
+                        $kanji.effect("slide",200);
+                }
+
+                }
+        });
+        
+});
+</script>
+</body>
+</html>
